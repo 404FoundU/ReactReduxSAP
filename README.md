@@ -10,7 +10,7 @@ This code challenge uses React and Redux.
 These libraries are our preferred way to handle the logic for apps these days.
 Also included is SASS, one of our preferred CSS preprocessors.
 
-You might be new to React. In that case -- don't worry! Our recruiting team is viewing this test as a measure of how quickly you can pick up and work in this new library (and follow instructions), rather than a measure of the strict quality of your code or your knowledge of this library itself.
+You might be new to React. In that case -- don't worry! Our recruiting team is viewing this test as a measure of how quickly you can pick up, work in this new library and follow instructions, rather than a measure of the strict quality of your code or your knowledge of this library itself.
 
 Some handy links to documentation:
 - https://facebook.github.io/react/docs/hello-world.html

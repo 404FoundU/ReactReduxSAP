@@ -67,7 +67,7 @@
   },
   "dependencies": {
     "express": "^4.13.4",
-    "webpack": "^1.12.12",
+    "webpack": "^1.15.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
   }
