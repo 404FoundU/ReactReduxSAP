@@ -69,6 +69,7 @@ We would like you to complete these things:
 2. style the wine list to match this spec:
 
   ![The wine list design](spec.png)
+
 3. implement features for each wine
   - if it has the most units sold, it should have a badge reading "BEST SELLER"
   - it should have an average star rating indicator with a count of all ratings
