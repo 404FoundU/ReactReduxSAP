@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
@@ -18,7 +19,7 @@ export class Wines extends Component {
         <ul className="wines__list">
           {
             this.props.wines
-              .map(wine => <li key={wine.id} className="wine">{wine.name}</li>)
+              .map(wine => <li key={wine.name} className="wine">{wine.name}</li>)
           }
         </ul>
       </div>

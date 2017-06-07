@@ -5,20 +5,16 @@ We respect your time, so we have scoped the challenge to the minimum we could to
 We don't ask you to do anything here that you wouldn't need to do on an average day at Smashing Boxes.
 There's no tricky math or gotchas.
 
-Unless the recruiter you are working with has said otherwise, you have the freedom to solve this problem with any tools you'd like.
-We have two other project setups you could consider.
-One uses Angular 1.x.
-The other is a blank setup with just the server.
-With it, you can solve the problem with any tools whatsoever.
-Check them out below.
-
-- [Front-End Test (Angular)](https://github.com/smashingboxes/front-end-test-angular)
-- [Front-End Test (Server Only)](https://github.com/smashingboxes/front-end-test-server-only)
-
 In this boilerplate, you will find many of the tools we use every day.
 This code challenge uses React and Redux.
 These libraries are our preferred way to handle the logic for apps these days.
-Also included is SASS, our preferred CSS preprocessor.
+Also included is SASS, one of our preferred CSS preprocessors.
+
+You might be new to React. In that case -- don't worry! Our recruiting team is viewing this test as a measure of how quickly you can pick up, work in this new library and follow instructions, rather than a measure of the strict quality of your code or your knowledge of this library itself.
+
+Some handy links to documentation:
+- https://facebook.github.io/react/docs/hello-world.html
+- http://redux.js.org/
 
 Setting up a front-end project can easily take more time than this task itself.
 Recognizing that, we've set everything up for you.
@@ -32,8 +28,9 @@ And of course, if you experience any problems, feel free to open issues on this 
 Required software:
 - Node.js
 - NPM
+- Git
 
-To get started, clone down this repo.
+To get started, clone down this repo. Run this command from your terminal / command line:
 
 ```
 git clone git@github.com:smashingboxes/front-end-test-react.git
