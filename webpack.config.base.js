@@ -21,7 +21,15 @@ module.exports = {
       {test: /\.s(c|a)ss$/, loader: 'sass', query: { outputStyle: 'expanded' }},
       {test: /\.(gif|png|jpg|svg|woff|woff2|ttf|eot)$/, loader: 'url', query: { limit: 25000 }},
       {test: /\.json$/, loader: 'json'},
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
     ]
+  },
+  externals: {
+    'react/addons': true,                      // pre-existing at enzyme 2.8.0
+    'react/lib/ExecutionEnvironment': true,    // pre-existing at enzyme 2.8.0
+    'react/lib/ReactContext': true,            // pre-existing at enzyme 2.8.0
+    'react-dom/test-utils': true,
+    'react-test-renderer/shallow': true
   },
   plugins: [
     new webpack.NoErrorsPlugin(),

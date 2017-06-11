@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import Header from './Header';
+import WineImg from './wine-placeholder.png';
+import EmptyStar from './star-empty.svg';
+import FilledStar from './star-filled.svg';
+
 
 import * as actionCreators from './wineActions';
 
@@ -14,14 +19,27 @@ export class Wines extends Component {
 
   render() {
     return (
+
+
       <div className="wines">
-        <h1 className="wines__title">Wine List</h1>
-        <ul className="wines__list">
+        <Header/>
+        <ul className="wines__list row">
           {
             this.props.wines
-              .map(wine => <li key={wine.name} className="wine">{wine.name}</li>)
+              .map(wine =>
+              <li key={wine.name} className="wine">
+                <img src={WineImg}/>
+                {wine.name} {wine.vintage} {wine.vineyard}
+                <EmptyStar className='App-logo' ariaLabel='logo' />
+              </li>)
           }
         </ul>
+        <div>
+        <div className="row">
+          <div className= "col-md-4">
+          </div>
+        </div>
+      </div>
       </div>
     );
   }
