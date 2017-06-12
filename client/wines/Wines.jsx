@@ -4,8 +4,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import Header from './Header';
 import WineImg from './wine-placeholder.png';
-import StarEmpty from './StarEmpty';
-import StarFilled from './StarFilled';
+import StarRating from './StarRating';
 
 
 import * as actionCreators from './wineActions';
@@ -69,33 +68,39 @@ render() {
         </div>
           {
             this.props.wines
-                .map(wine =>
-                    <div className="product-item">
-                        <figure className="profuct-img">
+                .map((wine, i) => {
+                    let rate = 0;
+                    for(let s of wine.ratings){
+                      rate += s.stars;
+                    }
+                    rate = rate ? (Math.ceil(rate / wine.ratings.length)) : 0;
+                    return (<div className="product-item" key={'wine_'+i}>
+                      <div className="flex1 product-img-wrap">
+                        <figure className="product-img">
                             <img src={WineImg}/>
                         </figure>
-                        <div className="product-des">
-                          <div className="product-title">
-                            <div className="title-wraper">
-                              <span className="title-main with-tag">{wine.name}, {wine.vintage}</span>
-                              { this.bestSeller(this.state.maxSold, wine.unitsSold) }
-
-                            </div>
+                      </div>
+                      <div className="flex1 product-des">
+                        <div className="product-title">
+                          <div className="title-wraper">
+                            <span className={this.bestSeller(this.state.maxSold, wine.unitsSold) ? 'title-main with-tag' : 'title-main' }>{wine.name}, {wine.vintage}</span>
                             <span className="title-caption">{wine.region}</span>
+                            <span className="clearfix"></span>
+
                           </div>
-                            <div className="product-rating">
-                              <div className="rating-stars">
-                                    <StarFilled/>
-                                    <StarFilled/>
-                                    <StarFilled/>
-                                    <StarEmpty/>
-                                    <StarEmpty/>
-                                    <span className="rating-count">({wine.ratings.length})</span>
-                              </div>
+                          { this.bestSeller(this.state.maxSold, wine.unitsSold) ? (<div className="sell-tag">Best seller</div>) : null }
+                          <div className="clearfix"></div>
+                        </div>
+                          <div className="product-rating">
+                            <div className="rating-stars">
+                                  <StarRating rate={rate}/>
+                                  <span className="rating-count">({wine.ratings.length})</span>
                             </div>
                           </div>
                         </div>
-                      )
+                        <div className="clearfix"></div>
+                      </div>);
+                })
               }
         </div>
       );
@@ -103,8 +108,10 @@ render() {
 
     bestSeller(maxSold, unitsSold ){
       if(this.state.maxSold === unitsSold){
-        return (<span className="sell-tag">Best seller</span>);
-    }
+        return true;
+      }else{
+        return false;
+      }
   }
 }
 

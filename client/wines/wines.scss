@@ -1,3 +1,6 @@
+$break-small: 480px;
+$break-large: 667px;
+
 .wines__title{
     font-size: -webkit-xxx-large;
     text-align: -webkit-center;
@@ -10,18 +13,56 @@ body {
 .product-item {
   border-bottom: 1px solid #ccc;
   padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
+}
+
+.flex1{
+  float: left;
+}
+
+.product-img-wrap{
+  width: 100px;
+}
+
+.product-des{
+  width: calc(100% - 100px);
+  position: relative;
+  height: 85px;
+}
+
+.clearfix{
+  display: block;
+  clear: both;
+}
+
+.title-wraper{
+  width: calc(100% - 120px);
+  float: left;
+  @media screen and (max-width: $break-large) {
+    width: 100%;
+    float: none;
+  }
 }
 
 .title-main {
   font-weight: 600;
   font-size: 1em;
-  float: left;
+  @media screen and (max-width: $break-large) {
+    font-size: 0.8em;
+  }
 }
+.rating-count{
+  font-size: 0.8em;
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
+  margin-left: 5px;
+}
+// .with-tag {
+//   width: calc(100% - 100px);
+// }
 
-.with-tag {
-  width: calc(100%-100px);
+.rating-wrap{
+  display: inline-block;
 }
 
 .title-caption {
@@ -30,7 +71,7 @@ body {
   display: block;
 }
 
-.profuct-img {
+.product-img {
   margin: 0 10px 0 10px;
   img {
     width: 80px;
@@ -38,8 +79,8 @@ body {
 }
 
 .product-rating {
-  position: relative;
-  margin-top: 32px;
+  position: absolute;
+  bottom: 0;
 }
 
 .sell-tag {
@@ -51,5 +92,15 @@ body {
   border-radius: 5px;
   display: inline-block;
   width: 100px;
+  text-align: center;
   float: right;
+  @media screen and (max-width: $break-large) {
+    float: none;
+    margin-top: 10px;
+    font-size: 0.7em;
+  }
+}
+
+.product-filter{
+  text-align: right;
 }
