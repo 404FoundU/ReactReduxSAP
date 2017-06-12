@@ -2,3 +2,54 @@
     font-size: -webkit-xxx-large;
     text-align: -webkit-center;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.product-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title-main {
+  font-weight: 600;
+  font-size: 1em;
+  float: left;
+}
+
+.with-tag {
+  width: calc(100%-100px);
+}
+
+.title-caption {
+  color: #ccc;
+  font-size: 0.8em;
+  display: block;
+}
+
+.profuct-img {
+  margin: 0 10px 0 10px;
+  img {
+    width: 80px;
+  }
+}
+
+.product-rating {
+  position: relative;
+  margin-top: 32px;
+}
+
+.sell-tag {
+  background: #d04040;
+  color: #fff;
+  padding: 2px 10px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  display: inline-block;
+  width: 100px;
+  float: right;
+}
