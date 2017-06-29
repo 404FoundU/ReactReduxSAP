@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 const StarEmpty = (props) => {
   return (
-    <svg width="16px" height="16px" viewBox="0 0 220 221" version="1.1" >
+    <svg width="16px" height="16px"   viewBox="0 0 220 221" version="1.1" >
         <title>Untitled</title>
         <desc>Created with Sketch.</desc>
         <defs></defs>

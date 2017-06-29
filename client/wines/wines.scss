@@ -27,6 +27,10 @@ body {
   width: calc(100% - 100px);
   position: relative;
   height: 85px;
+  @media screen and (max-width: $break-small) {
+    height:100px;
+
+  }
 }
 
 .clearfix{
@@ -75,7 +79,9 @@ body {
   margin: 0 10px 0 10px;
   img {
     width: 80px;
+
   }
+
 }
 
 .product-rating {
@@ -103,4 +109,8 @@ body {
 
 .product-filter{
   text-align: right;
+}
+
+.star-padding{
+  padding-left: 2px;
 }

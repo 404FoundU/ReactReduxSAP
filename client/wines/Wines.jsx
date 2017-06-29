@@ -73,7 +73,7 @@ render() {
                     for(let s of wine.ratings){
                       rate += s.stars;
                     }
-                    rate = rate ? (Math.ceil(rate / wine.ratings.length)) : 0;
+                    rate = rate ? (rate / wine.ratings.length) : 0;
                     return (<div className="product-item" key={'wine_'+i}>
                       <div className="flex1 product-img-wrap">
                         <figure className="product-img">
